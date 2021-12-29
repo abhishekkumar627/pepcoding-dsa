@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class SeatingArrangement {
     public static void main(String[] args) throws Exception {
        Scanner scn = new Scanner(System.in);
        
