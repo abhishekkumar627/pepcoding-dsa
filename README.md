@@ -20,4 +20,4 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 
 
 ## Contest Solutions
-Present in - `src` folder with questions as well.
+Present in - `src/Contest{Number}` folder with questions as well.
