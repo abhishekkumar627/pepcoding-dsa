@@ -1,3 +1,5 @@
+package Contest01;
+
 import java.util.Scanner;
 
 class MatrixObtainedByRotation{
@@ -34,7 +36,7 @@ class MatrixObtainedByRotation{
         while(n>0){
             transpose(arr2);
             reverse(arr2);
-            display(arr2);
+           // display(arr2);
             isMatching =  compare(arr1,arr2);
             if(isMatching){
                 break;
