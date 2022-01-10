@@ -16,19 +16,15 @@ class MissingPositive{
        System.out.println(val);
     }
 
+   
     private static int missingPositive(int[] arr) {
-        int sum=0;        
-        int max = Integer.MIN_VALUE;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]>0){
-                sum = sum+arr[i];
-            }
-            if(arr[i]>max){
-                max=arr[i];
-            }
+        java.util.Arrays.sort(arr);        
+        int ans=1;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]==ans)
+                ans++;
         }
-        
-        int nSum = (max*(max+1))/2;       
-        return nSum-sum;
+        return ans;
     }
 }
