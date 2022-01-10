@@ -28,38 +28,27 @@ class MatrixObtainedByRotation{
     }
 
     private static boolean isMatchingArrays(int[][] arr1, int[][] arr2) {
-        int n=3;
-        boolean isMatching =  compare(arr1,arr2);
-        if(isMatching){
-            return isMatching;
-        }
-        while(n>0){
-            transpose(arr2);
-            reverse(arr2);
-           // display(arr2);
-            isMatching =  compare(arr1,arr2);
-            if(isMatching){
-                break;
+        int n=4;       
+        while(n>0){            
+            if(compare(arr1,arr2)){
+                return true;
             }
+            transpose(arr2);           
+            reverse(arr2);
             n--;
         }
-        return isMatching;
+        return false;
     }
 
-    private static boolean compare(int[][] arr1, int[][] arr2) {
-        if(arr1[0].length!=arr2[0].length){
-            return false;
-        }
-        boolean isAllElementsMatched = true;
-       outer: for(int i = 0; i < arr1.length; i++){
+    private static boolean compare(int[][] arr1, int[][] arr2) {               
+         for(int i = 0; i < arr1.length; i++){
                  for(int j = 0; j < arr1[0].length ; j++){
                    if(arr1[i][j]!=arr2[i][j]){
-                      isAllElementsMatched = false;
-                      break outer;
+                      return false;
                    }
               }            
          }
-        return isAllElementsMatched;
+        return true;
     }
 
     public static void transpose(int[][] arr){
@@ -80,7 +69,6 @@ class MatrixObtainedByRotation{
                 int temp = arr[i][li];
                 arr[i][li]  = arr[i][ri];
                 arr[i][ri]  = temp;
-
                 li++;
                 ri--;
             }            
