@@ -9,7 +9,7 @@
  * }
  */
 package LeetCode.LinkedList;
-import java.util.*;
+//import java.util.*;
 public class LeetCode21 { 
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {       
